@@ -11,7 +11,7 @@ async function main() {
           email: 'jpabon@gmail.com',
           accountNumber: 777,
           amount: 100000,
-          currency: 10000,
+          currency: 'CLP',
       },
   });
 

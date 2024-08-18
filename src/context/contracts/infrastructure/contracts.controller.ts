@@ -1,8 +1,8 @@
 import { NotFoundException, Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpStatus } from '@nestjs/common';
-import { ContractsService } from './contracts.service';
+import { ContractsService } from '../application/contracts.service';
 import { CreateContractDto } from '../application/dto/create-contract-use-case/create-contract.dto';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { ContractEntity } from './entities/contract.entity';
+import { ContractEntity } from '../domain/entities/contract.entity';
 
 @Controller('contracts')
 @ApiTags('contracts')
