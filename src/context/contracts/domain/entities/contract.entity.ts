@@ -25,5 +25,5 @@ export class ContractEntity implements Contract {
   amount: number;
 
   @ApiProperty()
-  currency: number;
+  currency: string;
 }

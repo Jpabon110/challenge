@@ -22,5 +22,5 @@ export class CreateContractDto {
 
   @IsNumber()
   @ApiProperty()
-  currency: number;
+  currency: string;
 }

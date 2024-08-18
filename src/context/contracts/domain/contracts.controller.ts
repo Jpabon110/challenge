@@ -1,7 +1,6 @@
 import { NotFoundException, Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpStatus } from '@nestjs/common';
 import { ContractsService } from './contracts.service';
 import { CreateContractDto } from '../application/dto/create-contract-use-case/create-contract.dto';
-import { UpdateContractDto } from '../application/dto/update-contract.dto';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ContractEntity } from './entities/contract.entity';
 
@@ -54,13 +53,4 @@ export class ContractsController {
     return contract;
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateContractDto: UpdateContractDto) {
-    return this.contractsService.update(+id, updateContractDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.contractsService.remove(+id);
-  }
 }

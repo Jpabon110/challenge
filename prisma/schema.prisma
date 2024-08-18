@@ -14,5 +14,5 @@ model Contract {
   initialdate   DateTime @default(now())
   accountNumber Int
   amount        Int
-  currency      Int
+  currency      String
 }
